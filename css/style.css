@@ -19,12 +19,32 @@ header{
     height: 100%;
     object-fit: cover; /*preenche toda a Div*/
     opacity: 0.5;
+    animation: zoom 20s;
+}
+@keyframes zoom {
+    0%{
+        transform: scale(1.3);
+    }
+    100%{
+        transform: scale(1);
+    }
 }
 
 .banner{
     position: absolute;
     top: 20%;
     left: 20%;
+}
+
+@keyframes moveBanner {
+     0%{
+        transform: translateY(30rem) rotateY(-90deg);
+        opacity: 0;
+     }
+     100%{
+        transform: translateY(0) rotateY(0);
+        opacity: 100;
+     }
 }
 .banner h1{
     color: #ffff;
@@ -34,6 +54,7 @@ header{
     font-weight: 400;
     line-height: 3.5rem;
     margin-bottom: 1rem;
+    animation: moveBanner 3s forwards;
 }
 
 .banner p{
@@ -41,16 +62,33 @@ header{
     color: #fff;
     font-size: 2rem;
     text-shadow: .2rem .2rem 2px #577;
-    margin-bottom: 4rem;
+    margin-bottom: 5rem;
+    animation: moveBanner 4s forwards;
 }
 
 .banner button{
     font-family:'Mulish', serif ;
     font-size: 1rem;
-    color: #000;
-    background-color: rgba(148, 0, 211, 0.7 );
-    padding: 1rem;
+    color: #fff;
+    background-color: rgba(148, 0, 211, 0.6 );
+    padding: 1rem 2rem;
     border-style: none;
     border-radius: 5px;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    cursor: pointer;
+    transition: ease-out 300ms;
+    animation: moveBanner 4s forwards;
 }
+
+.banner button:hover{
+    color: #000;
+    background-color: rgba(100, 100, 100, 0.5);
+    font-weight: 600;
+    transition: ease-in 300ms;
+    padding: 1rem 3rem;
+    letter-spacing: .2rem;
+}
+
+
 
