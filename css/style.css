@@ -250,6 +250,28 @@ header{
 .social-media i:hover{
     background-color: rgba(100, 100, 100, 0.8);
 }
+/*HIDDEN MENU*/
+.hidden-menu .sidebar{
+    right: -20rem;
+}
+.hidden-menu .hamburguer{
+    right: 2rem;
+    
+}
+.hidden-menu #line1{
+    transform: rotate(-0deg) translate(0, 0);
+    width: 100%;
+    height: .1rem;
+}
+.hidden-menu #line2{
+    opacity: 1;
+    visibility: visible;
+}
+.hidden-menu #line3{
+    transform: rotate(0deg) translate(0, 0);
+    width: 100%;
+    height: .1rem;
+}
 
 .conhecimentos{
     display: grid;
