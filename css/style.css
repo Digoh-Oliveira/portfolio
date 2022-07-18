@@ -354,5 +354,81 @@ header{
     width: 100%;
 }
 
+/*Projetos*/
 
+.projetos{
+    display: flex;
+    justify-content: space-evenly;
+}
+.card{
+    width: 18rem;
+    height: 25rem;
+    position: relative;
+}
+.card-img-wrapper{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    border-radius: .5rem;
+}
+.card-img-wrapper img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: .5rem;
+    opacity: .8;
+    transition: .8s;
+}
+.card-info{
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    bottom: 0;
+    border-radius: .5rem;
+    padding: 1.8rem;
+    text-shadow: 0 0.3rem 0.3rem rgba(0, 0, 0, 0.5);
+    transition: all .8s;
+}
+.card-info h2{
+    font-family: var(--font-primary);
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #eee;
+    
+}
+.card-info h3{
+    font-family: var(--font-secundary);
+    font-weight: bold;
+    color: #ff4081;
+    margin-bottom: 1.5rem;
+}
+.card-info p{
+    font-family: var(--font-secundary);
+    font-weight: 400;
+    color: #eee;
+    width: 80%;
+    margin-bottom: .8rem;
+}
+.card-info button{
+    width: 8rem;
+    height: 2.5rem;
+    background-color: rgba(148, 0, 211, 0.6 );
+    border-radius: 5rem;
+    border: none;
+    font-family: var(--font-action);
+    font-size: 1rem;
+    color: #eee;
+    box-shadow: 0 .1rem .8rem rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    margin-left: 3rem;
+}
+.card:hover .card-info{
+    bottom: 2rem;
+    opacity: 1;
+    visibility: visible;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+.card:hover .card-img-wrapper img{
+    opacity: 0;
+}
 
